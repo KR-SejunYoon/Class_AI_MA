@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="윤세준(Sejun Yoon)의 학력, 연구, 기술 창업 경험 및 학술 논문 목록. 청주대학교 경영정보시스템."><meta name="theme-color" content="#163c32"><title>윤세준 · Sejun Yoon | Academic CV</title><style>
+/* Sejun Yoon — academic curriculum vitae.
+   Self-contained: system fonts, responsive layout, and A4 print styling. */
+
+:root {
+  color-scheme: light;
+  --paper: #faf9f5;
+  --sidebar-paper: #f1f0e9;
+  --ink: #24352d;
+  --body: #343e38;
+  --muted: #657067;
+  --green: #224735;
+  --green-soft: #e7ece4;
+  --bronze: #866744;
+  --line: #d6dbd1;
+  --serif: Georgia, "Times New Roman", "Batang", serif;
+  --sans: "Segoe UI", "Malgun Gothic", "Apple SD Gothic Neo", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 28px; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--body);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  word-break: keep-all;
+}
+::selection { color: #fff; background: var(--green); }
+a { color: var(--green); text-underline-offset: 4px; }
+a:hover { color: #5c6d45; }
+button, input { font: inherit; }
+button, a, input { -webkit-tap-highlight-color: transparent; }
+button { cursor: pointer; }
+button:focus-visible, a:focus-visible, input:focus-visible {
+  outline: 3px solid var(--bronze);
+  outline-offset: 5px;
+}
+button:disabled { cursor: default; opacity: .6; }
+h1, h2, h3, p { margin-top: 0; }
+[hidden] { display: none !important; }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.skip-link {
+  position: absolute;
+  top: -80px;
+  left: 16px;
+  z-index: 10;
+  padding: 10px 18px;
+  background: var(--green);
+  color: #fff;
+}
+.skip-link:focus { top: 16px; }
+
+.cv-shell {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  width: min(1160px, calc(100% - 80px));
+  min-height: 100vh;
+  margin: 0 auto;
+}
+.sidebar {
+  align-self: start;
+  position: sticky;
+  top: 0;
+  padding: 66px 32px 40px 8px;
+}
+.monogram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 66px;
+  margin-bottom: 31px;
+  border: 1px solid var(--green);
+  color: var(--green);
+  font-family: var(--serif);
+  font-size: 25px;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+.eyebrow {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--bronze);
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+}
+.profile-name {
+  margin-bottom: 0;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 29px;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: -.9px;
+}
+.name-ko {
+  display: block;
+  margin: 8px 0 20px;
+  color: var(--muted);
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+.affiliation { margin-bottom: 23px; font-size: 13px; line-height: 1.9; }
+.affiliation strong { color: var(--ink); font-weight: 600; }
+.contact-list {
+  display: grid;
+  gap: 9px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 12px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+.contact-list a { text-decoration: none; }
+.contact-list li > span { display: block; margin-top: 5px; color: var(--bronze); font-size: 8px; letter-spacing: 1.1px; }
+.contact-list small { display: block; color: var(--muted); font-size: 11px; }
+.contact-list a:hover { text-decoration: underline; }
+.side-nav {
+  display: grid;
+  gap: 12px;
+  margin-top: 43px;
+  padding-top: 26px;
+  border-top: 1px solid var(--line);
+  font-size: 12px;
+}
+.side-nav a { color: var(--muted); text-decoration: none; }
+.side-nav a:hover, .side-nav a:focus-visible { color: var(--green); }
+.side-nav span { margin-right: 12px; color: var(--bronze); font-size: 10px; }
+.sidebar-note {
+  margin-top: 42px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.9;
+}
+.sidebar-note p { margin-bottom: 8px; }
+.main-content {
+  min-width: 0;
+  padding: 67px 0 34px 65px;
+  border-left: 1px solid var(--line);
+}
+.masthead {
+  position: relative;
+  padding-bottom: 42px;
+  border-bottom: 1px solid var(--green);
+}
+.masthead .eyebrow { margin-bottom: 23px; }
+.hero-title {
+  margin-bottom: 17px;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(50px, 5.5vw, 73px);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -3.8px;
+}
+.hero-title .name-ko {
+  display: inline-block;
+  margin: 0 0 0 19px;
+  font-family: var(--sans);
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 1.5px;
+  vertical-align: middle;
+}
+.hero-name-ko { display: inline-block; margin-left: 20px; font-family: var(--sans); font-size: 21px; font-weight: 400; letter-spacing: 1px; vertical-align: middle; }
+.hero-subtitle {
+  max-width: 590px;
+  margin-bottom: 23px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.85;
+}
+.actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 8px 15px;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: background .15s ease, border-color .15s ease;
+}
+.button:hover { border-color: var(--green); background: var(--green-soft); color: var(--green); }
+.button-primary { border-color: var(--green); background: var(--green); color: #fff; }
+.button-primary:hover { border-color: #163627; background: #163627; color: #fff; }
+.section { padding-top: 38px; scroll-margin-top: 25px; }
+.section + .section { margin-top: 32px; border-top: 1px solid var(--line); }
+.section-heading { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 25px; }
+.section-index {
+  flex: 0 0 auto;
+  padding-top: 5px;
+  color: var(--bronze);
+  font-family: var(--serif);
+  font-size: 14px;
+  line-height: 1.5;
+}
+.section-title {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 29px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -.7px;
+}
+.section-kicker {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.5;
+  letter-spacing: 1.3px;
+}
+.research-intro { max-width: 680px; font-size: 14px; line-height: 1.95; }
+.research-intro p:last-child { margin-bottom: 0; }
+.keywords { display: flex; flex-wrap: wrap; gap: 7px 9px; margin: 19px 0 0; padding: 0; list-style: none; }
+.keywords > * {
+  display: inline-block;
+  padding: 3px 10px;
+  border: 1px solid var(--line);
+  color: #4e6456;
+  font-size: 10px;
+  line-height: 1.7;
+}
+.education-list { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
+.education-item { position: relative; padding: 0 0 22px 20px; border-left: 1px solid var(--line); }
+.education-item::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: -4px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--green);
+}
+.education-item:last-child { padding-bottom: 0; }
+.degree { margin: 0 0 4px; color: var(--ink); font-size: 15px; font-weight: 600; line-height: 1.55; }
+.degree-year { margin: 0 0 5px; color: var(--bronze); font-size: 12px; font-weight: 600; letter-spacing: .5px; }
+.institution span { margin-left: 8px; color: var(--muted); font-size: 11px; }
+.institution { margin: 0; color: var(--body); font-size: 13px; line-height: 1.8; }
+.education-note { margin: 4px 0 0; color: var(--muted); font-size: 11px; line-height: 1.8; }
+.career-list { display: grid; gap: 19px; margin: 0; padding: 0; list-style: none; }
+.career-item { padding-left: 20px; border-left: 2px solid var(--bronze); }
+.career-item h3 { margin: 0 0 6px; color: var(--ink); font-size: 15px; font-weight: 600; line-height: 1.6; }
+.career-item p { margin: 0 0 7px; font-size: 13px; line-height: 1.85; }
+.career-item p:last-child { margin-bottom: 0; }
+.metrics { display: flex; flex-wrap: wrap; gap: 22px 34px; margin: 24px 0 0; padding: 18px 0 0; border-top: 1px solid var(--line); }
+.metrics > div { display: flex; flex-direction: column; gap: 1px; }
+.metrics dt, .metrics dd { margin: 0; }
+.metric-value { order: -1; color: var(--green); font-family: var(--serif); font-size: 30px; line-height: 1.2; letter-spacing: -.8px; }
+.metric-label { color: var(--muted); font-size: 10px; line-height: 1.7; }
+.metric-value span { margin-left: 4px; font-family: var(--sans); font-size: 12px; }
+.metric-note { margin: 14px 0 0; color: var(--muted); font-size: 10px; line-height: 1.8; }
+
+.pub-toolbar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 15px; }
+.pub-search {
+  flex: 1 1 210px;
+  min-width: 0;
+  min-height: 41px;
+  padding: 9px 13px;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  background: #fffdfa;
+  color: var(--ink);
+  font-size: 12px;
+  line-height: 1.6;
+}
+.pub-search::placeholder { color: var(--muted); }
+.pub-filters { display: flex; flex-wrap: wrap; gap: 5px; }
+.filter-button {
+  min-height: 36px;
+  padding: 6px 11px;
+  border: 1px solid transparent;
+  border-radius: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+.filter-button:hover { background: var(--green-soft); color: var(--green); }
+.filter-button.is-active, .filter-button[aria-pressed="true"] {
+  border-color: var(--green);
+  background: var(--green);
+  color: #fff;
+}
+.pub-count {
+  margin: 0 0 4px;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: .2px;
+}
+.publication-list { margin: 0; padding: 0; list-style: none; }
+.publication { display: flex; gap: 17px; padding: 24px 0 25px; border-bottom: 1px solid var(--line); }
+.publication:last-child { border-bottom: 0; }
+.pub-number { flex: 0 0 22px; padding-top: 3px; color: var(--bronze); font-family: var(--serif); font-size: 13px; }
+.pub-body { min-width: 0; flex: 1; }
+.pub-meta { display: flex; flex-wrap: wrap; gap: 10px; align-items: baseline; margin-bottom: 7px; color: var(--muted); font-size: 10px; line-height: 1.6; }
+.pub-year { color: var(--bronze); font-weight: 600; letter-spacing: .5px; }
+.pub-title {
+  margin: 0 0 8px;
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.55;
+  letter-spacing: -.2px;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+.pub-title a { color: inherit; text-decoration: none; }
+.pub-title a:hover { text-decoration: underline; text-decoration-color: var(--bronze); }
+.pub-authors { margin: 0 0 4px; color: var(--muted); font-size: 11px; line-height: 1.9; overflow-wrap: anywhere; word-break: normal; }
+.pub-authors strong { color: var(--ink); font-weight: 600; }
+.pub-venue { margin: 0; color: var(--body); font-size: 11px; line-height: 1.8; overflow-wrap: anywhere; word-break: normal; }
+.pub-link { display: inline-block; margin: 9px 14px 0 0; color: var(--green); font-size: 10px; line-height: 1.8; text-decoration: none; border-bottom: 1px solid #aebdac; }
+.pub-link:hover { border-color: var(--green); }
+.empty-state { padding: 35px 0; color: var(--muted); text-align: center; font-size: 13px; }
+.source-note { margin: 21px 0 0; padding: 15px 0 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 10px; line-height: 1.9; }
+.source-note p:last-child { margin-bottom: 0; }
+.footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; margin-top: 42px; padding-top: 19px; border-top: 1px solid var(--green); color: var(--muted); font-size: 10px; line-height: 1.8; }
+.footer p { margin: 0; }
+
+@media (min-width: 1500px) {
+  .cv-shell { width: 1190px; }
+  .main-content { padding-left: 76px; }
+}
+@media (max-width: 1000px) {
+  .cv-shell { width: calc(100% - 56px); grid-template-columns: 215px minmax(0, 1fr); }
+  .sidebar { padding-right: 25px; }
+  .main-content { padding-left: 37px; }
+  .hero-title { font-size: 53px; letter-spacing: -2.8px; }
+  .hero-title .name-ko { margin-left: 13px; font-size: 17px; }
+}
+@media (max-width: 800px) {
+  .cv-shell { display: block; width: min(690px, calc(100% - 48px)); }
+  .sidebar { position: static; display: grid; grid-template-columns: 52px 1fr; column-gap: 18px; align-items: start; padding: 28px 0 25px; border-bottom: 1px solid var(--line); }
+  .monogram { grid-row: 1 / span 4; width: 49px; height: 56px; margin: 0; font-size: 22px; }
+  .sidebar > .eyebrow { margin: 0 0 5px; font-size: 8px; letter-spacing: 1.8px; }
+  .profile-name { font-size: 23px; }
+  .sidebar > .name-ko { margin: 3px 0 0; font-size: 11px; }
+  .affiliation { grid-column: 2; margin: 9px 0 0; font-size: 11px; }
+  .contact-list { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 5px 20px; margin-top: 16px; font-size: 11px; }
+  .side-nav { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 17px; padding-top: 15px; font-size: 11px; }
+  .side-nav span { margin-right: 7px; }
+  .sidebar-note { display: none; }
+  .main-content { padding: 38px 0 25px; border-left: 0; }
+  .masthead { padding-bottom: 30px; }
+  .masthead .eyebrow { margin-bottom: 19px; }
+  .hero-title { font-size: clamp(43px, 9vw, 64px); }
+  .hero-title .name-ko { font-size: 17px; }
+  .hero-subtitle { font-size: 13px; }
+  .section { padding-top: 30px; }
+  .section + .section { margin-top: 27px; }
+  .section-heading { margin-bottom: 22px; }
+  .section-title { font-size: 27px; }
+}
+@media (max-width: 440px) {
+  .cv-shell { width: calc(100% - 36px); }
+  .sidebar { padding-top: 23px; }
+  .hero-title { font-size: 43px; letter-spacing: -2.3px; }
+  .hero-title .name-ko { margin-left: 10px; font-size: 15px; }
+  .hero-name-ko { margin-left: 10px; font-size: 15px; }
+  .eyebrow { font-size: 9px; letter-spacing: 1.9px; }
+  .hero-subtitle { font-size: 12px; }
+  .research-intro { font-size: 13px; }
+  .pub-toolbar { gap: 9px; }
+  .pub-search { flex-basis: 100%; }
+  .pub-filters { gap: 4px; }
+  .filter-button { padding-inline: 12px; }
+  .publication { gap: 11px; padding-block: 22px; }
+  .pub-number { flex-basis: 18px; font-size: 12px; }
+  .pub-title { font-size: 15px; }
+  .footer { margin-top: 32px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}
+
+@page { size: A4; margin: 15mm 17mm 17mm; }
+@media print {
+  :root { --paper: #fff; --ink: #162c20; --body: #272d28; --muted: #555d57; --line: #cdd2ca; }
+  html { scroll-behavior: auto; }
+  body { background: #fff; font-size: 9pt; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  a, a:visited { color: inherit; }
+  .screen-only, .skip-link, .actions, .side-nav, .pub-toolbar, .pub-count, .empty-state { display: none !important; }
+  .cv-shell { display: block; width: auto; min-height: 0; margin: 0; }
+  .sidebar { position: static; display: block; padding: 0 0 5mm; border-bottom: 1px solid var(--line); }
+  .sidebar .monogram, .sidebar .eyebrow, .sidebar .profile-name, .sidebar .name-ko, .sidebar-note { display: none; }
+  .affiliation { display: inline; margin: 0; font-size: 8pt; line-height: 1.5; }
+  .contact-list { display: flex; flex-wrap: wrap; gap: 1mm 5mm; margin-top: 1.5mm; font-size: 7.5pt; line-height: 1.5; }
+  .contact-list a { text-decoration: none; }
+  .main-content { padding: 6mm 0 0; border: 0; }
+  .masthead { padding-bottom: 6mm; }
+  .masthead .eyebrow { margin-bottom: 3mm; font-size: 7pt; letter-spacing: 1.5pt; }
+  .hero-title { margin-bottom: 3mm; font-size: 35pt; line-height: 1.1; letter-spacing: -1.8pt; }
+  .hero-title .name-ko { margin-left: 5mm; font-size: 13pt; letter-spacing: 1pt; }
+  .hero-name-ko { margin-left: 5mm; font-size: 13pt; letter-spacing: 1pt; }
+  .contact-list li > span { display: none; }
+  .contact-list small { display: inline; margin-left: 3mm; font-size: 7pt; }
+  .degree-year { margin-bottom: 1mm; font-size: 8pt; }
+  .metric-note { font-size: 6.5pt; }
+  .hero-subtitle { max-width: none; margin-bottom: 0; font-size: 8.5pt; line-height: 1.65; }
+  .section { padding-top: 6mm; scroll-margin-top: 0; }
+  .section + .section { margin-top: 5mm; }
+  .section-heading { gap: 3mm; margin-bottom: 4mm; break-after: avoid; page-break-after: avoid; }
+  .section-index { padding-top: 1mm; font-size: 9pt; }
+  .section-kicker { margin-bottom: 1mm; font-size: 6.5pt; }
+  .section-title { font-size: 18pt; letter-spacing: -.3pt; }
+  .research-intro { max-width: none; font-size: 8.5pt; line-height: 1.7; }
+  .keywords { gap: 1.5mm; margin-top: 3mm; }
+  .keywords > * { padding: .6mm 2mm; font-size: 7pt; }
+  .education-item { padding: 0 0 4mm 4mm; break-inside: avoid; page-break-inside: avoid; }
+  .education-item::before { top: 1.9mm; left: -.8mm; width: 1.4mm; height: 1.4mm; }
+  .degree { margin-bottom: 1mm; font-size: 9pt; }
+  .institution { font-size: 8pt; }
+  .education-note { font-size: 7pt; }
+  .career-list { gap: 3mm; }
+  .career-item { padding-left: 4mm; break-inside: avoid; page-break-inside: avoid; }
+  .career-item h3 { margin-bottom: 1mm; font-size: 9pt; }
+  .career-item p { margin-bottom: 1mm; font-size: 8pt; line-height: 1.6; }
+  .metrics { gap: 8mm; margin-top: 4mm; padding-top: 3mm; }
+  .metric-value { font-size: 19pt; }
+  .metric-label { font-size: 6.5pt; }
+  .publication { gap: 3mm; padding: 4mm 0; break-inside: avoid; page-break-inside: avoid; }
+  .publication[hidden] { display: grid !important; grid-template-columns: 5mm minmax(0, 1fr); }
+  .pub-number { flex-basis: 5mm; padding-top: .5mm; font-size: 8pt; }
+  .pub-meta { gap: 3mm; margin-bottom: 1mm; font-size: 6.5pt; }
+  .pub-title { margin-bottom: 1.5mm; font-size: 9.5pt; line-height: 1.45; letter-spacing: 0; }
+  .pub-authors { margin-bottom: .8mm; font-size: 7.5pt; line-height: 1.6; }
+  .pub-venue { font-size: 7.5pt; line-height: 1.6; }
+  .pub-link { margin: 1mm 3mm 0 0; border: 0; font-size: 6.5pt; }
+  .source-note { margin-top: 3mm; padding-top: 3mm; font-size: 6.5pt; line-height: 1.6; }
+  .footer { margin-top: 7mm; padding-top: 3mm; font-size: 6.5pt; }
+  p { orphans: 3; widows: 3; }
+}
+
+</style></head>
+<body><a class="skip-link" href="#main">본문으로 건너뛰기</a>
+<div class="cv-shell"><aside class="sidebar" aria-label="프로필 및 목차">
+ <div class="monogram" aria-hidden="true">SY<span>•</span></div><p class="eyebrow">ACADEMIC PROFILE</p>
+ <h2 class="profile-name" lang="en">Sejun Yoon</h2><p class="name-ko">윤세준</p>
+ <p class="affiliation">청주대학교 경영학과<br>경영정보시스템</p>
+ <ul class="contact-list"><li><span>EMAIL</span><a href="mailto:yoonsejun@cju.ac.kr">yoonsejun@cju.ac.kr</a></li><li><span>OFFICE</span><a href="tel:+82432298130">043-229-8130</a><small>연구실 09-501</small></li><li><span>RESEARCH PROFILE</span><a href="https://scholar.google.co.kr/citations?user=m_wj9_YAAAAJ&amp;hl=ko" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a></li></ul>
+ <nav class="side-nav" aria-label="CV 목차"><a href="#research"><span>01</span> 연구 소개</a><a href="#education"><span>02</span> 학력</a><a href="#entrepreneurship"><span>03</span> 기술 창업</a><a href="#publications"><span>04</span> 논문 목록</a></nav>
+ <p class="sidebar-note">CURRICULUM VITAE<br>Updated · September 2026</p>
+ </aside><main class="main-content" id="main">
+ <header class="masthead"><p class="eyebrow">RESEARCH · INFORMATION SYSTEMS · ENTREPRENEURSHIP</p><h1 class="hero-title" lang="en">Sejun Yoon<span class="hero-name-ko">윤세준</span></h1><p class="hero-subtitle">정보시스템 연구자 · 기술 기반 창업 경험</p><div class="actions screen-only"><button class="button button-primary" id="print-cv" type="button">인쇄 / PDF 저장 <span aria-hidden="true">↗</span></button><a class="button" href="https://scholar.google.co.kr/citations?user=m_wj9_YAAAAJ&amp;hl=ko" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a></div></header>
+ <section class="section" id="research"><div class="section-heading"><span class="section-index" aria-hidden="true">01</span><div><p class="section-kicker" lang="en">RESEARCH PROFILE</p><h2 class="section-title">연구 소개</h2></div></div><p class="research-intro">특허와 학술 지식 네트워크를 분석하여 기술의 발전 경로와 혁신 기회를 연구합니다. 통계학과 정보시스템을 바탕으로 지식경영, 테크마이닝, 데이터 기반 의사결정을 탐구하며, 기술 기반 창업 경험을 갖추고 있습니다.</p><ul class="keywords" aria-label="주요 연구 주제"><li>Tech-mining</li><li>Knowledge Management</li><li>Main Path Analysis</li><li>Patent Analytics</li><li>Data-driven Innovation</li></ul>
+ <dl class="metrics"><div><dt class="metric-label">수록 학술지 논문</dt><dd class="metric-value">16<span>편</span></dd></div><div><dt class="metric-label">Google Scholar 인용</dt><dd class="metric-value">226</dd></div><div><dt class="metric-label">h-index</dt><dd class="metric-value">9</dd></div></dl><p class="metric-note">Google Scholar 지표 확인일: 2026.09.30 · 논문 목록은 Scholar 15편과 KCI 추가 확인 1편으로 구성</p></section>
+ <section class="section" id="education"><div class="section-heading"><span class="section-index" aria-hidden="true">02</span><div><p class="section-kicker" lang="en">EDUCATION</p><h2 class="section-title">학력</h2></div></div><div class="education-list"><article class="education-item"><p class="degree-year">2025</p><div><h3 class="degree">정보시스템 박사</h3><p class="institution">한양대학교 <span lang="en">Hanyang University</span></p><p class="education-note">석박사통합과정 졸업 · Ph.D. in Information Systems</p></div></article><article class="education-item"><p class="degree-year">2018</p><div><h3 class="degree">통계학 학사</h3><p class="institution">청주대학교 <span lang="en">Cheongju University</span></p><p class="education-note">학사과정 졸업 · Bachelor’s degree in Statistics</p></div></article></div></section>
+ <section class="section" id="entrepreneurship"><div class="section-heading"><span class="section-index" aria-hidden="true">03</span><div><p class="section-kicker" lang="en">TECHNOLOGY ENTREPRENEURSHIP</p><h2 class="section-title">기술 창업</h2></div></div><div class="career-list"><article class="career-item"><h3>넥스트솔 <span lang="en">NextSoL, Inc.</span></h3><p>기술 기반 창업 참여</p></article></div></section>
+ <section class="section" id="publications"><div class="section-heading"><span class="section-index" aria-hidden="true">04</span><div><p class="section-kicker" lang="en">PUBLICATIONS</p><h2 class="section-title">논문 목록</h2></div></div><div class="pub-toolbar screen-only" hidden><label class="sr-only" for="paper-search">논문 제목, 저자, 학술지, 연도 검색</label><input class="pub-search" id="paper-search" type="search" placeholder="제목, 저자, 학술지, 연도 검색" autocomplete="off"><div class="pub-filters" role="group" aria-label="논문 분류"><button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">전체 16</button><button class="filter-button" type="button" data-filter="international" aria-pressed="false">국제 13</button><button class="filter-button" type="button" data-filter="domestic" aria-pressed="false">국내 3</button></div></div><p class="pub-count screen-only" id="paper-count" role="status" aria-live="polite">16편 · 최신 연도순</p><ol class="publication-list"><li class="publication" data-kind="international" id="publication-1">
+ <span class="pub-number" aria-hidden="true">01</span>
+ <div class="pub-body"><div class="pub-meta"><span class="pub-year">2026</span><span>국제 학술지</span><span>온라인 공개: 2026.09.18</span></div>
+ <h3 class="pub-title" lang="en"><a href="https://doi.org/10.1016/j.hlpt.2026.101319" target="_blank" rel="noopener noreferrer">Time-driven activity-based costing as a decision infrastructure for value-based health care: A main-path analysis</a></h3>
+ <p class="pub-authors"><strong>Yoon, S.</strong>, &amp; Rhee, Y.</p><p class="pub-venue">Health Policy and Technology, 101319.</p>
+ <a class="pub-link" href="https://doi.org/10.1016/j.hlpt.2026.101319" target="_blank" rel="noopener noreferrer" aria-label="Time-driven activity-based costing as a decision infrastructure for value-based health care: A main-path analysis DOI 원문">DOI <span>10.1016/j.hlpt.2026.101319</span> <span aria-hidden="true">↗</span></a></div></li>
+<li class="publication" data-kind="domestic" id="publication-2">
+ <span class="pub-number" aria-hidden="true">02</span>
+ <div class="pub-body"><div class="pub-meta"><span class="pub-year">2026</span><span>국내 학술지</span></div>
+ <h3 class="pub-title"><a href="https://doi.org/10.5392/JKCA.2026.26.02.019" target="_blank" rel="noopener noreferrer">특허 인용 네트워크 기반 자율운항선박 기술의 축적 경로와 기술 전환 분석</a></h3>
+ <p class="pub-authors">정은주, 박현석, <strong>윤세준</strong></p><p class="pub-venue">한국콘텐츠학회 논문지, 26(2), 19–30.</p>
+ <a class="pub-link" href="https://doi.org/10.5392/JKCA.2026.26.02.019" target="_blank" rel="noopener noreferrer" aria-label="특허 인용 네트워크 기반 자율운항선박 기술의 축적 경로와 기술 전환 분석 DOI 원문">DOI <span>10.5392/JKCA.2026.26.02.019</span> <span aria-hidden="true">↗</span></a></div></li>
+<li class="publication" data-kind="international" id="publication-3">
+ <span class="pub-number" aria-hidden="true">03</span>
+ <div class="pub-body"><div class="pub-meta"><span class="pub-year">2025</span><span>국제 학술지</span></div>
+ <h3 class="pub-title" lang="en"><a href="https://doi.org/10.1093/ijlct/ctaf107" target="_blank" rel="noopener noreferrer">Technological trajectories and innovation pattern of electric vehicle battery technologies</a></h3>
+ <p class="pub-authors">Han, F., <strong>Yoon, S.</strong>, Raghavan, N., Zhang, S., &amp; Park, H.</p><p class="pub-venue">International Journal of Low-Carbon Technologies, 20, 1661–1673.</p>
+ <a class="pub-link" href="https://doi.org/10.1093/ijlct/ctaf107" target="_blank" rel="noopener noreferrer" aria-label="Technological trajectories and innovation pattern of electric vehicle battery technologies DOI 원문">DOI <span>10.1093/ijlct/ctaf107</span> <span aria-hidden="true">↗</span></a></div></li>
+<li class="publication" data-kind="international" id="publication-4">
+ <span class="pub-number" aria-hidden="true">04</span>
+ <div class="pub-body"><div class="pub-meta"><span class="pub-year">2024</span><span>국제 학술지</span></div>
+ <h3 class="pub-title" lang="en"><a href="https://doi.org/10.1016/j.ijhydene.2023.10.274" target="_blank" rel="noopener noreferrer">Technological trajectory in fuel cell technologies: A patent-based main path analysis</a></h3>
+ <p class="pub-authors">Han, F., <strong>Yoon, S.</strong>, Raghavan, N., Yang, B., &amp; Park, H.</p><p class="pub-venue">International Journal of Hydrogen Energy, 50, 1347–1361.</p>
+ <a class="pub-link" href="https://doi.org/10.1016/j.ijhydene.2023.10.274" target="_blank" rel="noopener noreferrer" aria-label="Technological trajectory in fuel cell technologies: A patent-based main path analysis DOI 원문">DOI <span>10.1016/j.ijhydene.2023.10.274</span> <span aria-hidden="true">↗</span></a></div></li>
+<li class="publication" data-kind="international" id="publication-5">
+ <span class="pub-number" aria-hidden="true">05</span>
+ <div class="pub-body"><div class="pub-meta"><span class="pub-year">2023</span><span>국제 학술지</span></div>
+ <h3 class="pub-title" lang="en"><a href="https://doi.org/10.1109/ACCESS.2023.3337651" target="_blank" rel="noopener noreferrer">Investigating Knowledge Structure and Future Directions in IT-Based Business Methods Using Hierarchical Main Path Approach</a></h3>
+ <p class="pub-authors"><strong>Yoon, S.</strong>, Raghavan, N., Le, N.-T., &amp; Park, H.</p><p class="pub-venue">IEEE Access, 11, 135334–135350.</p>
+ <a class="pub-link" href="https://doi.org/10.1109/ACCESS.2023.3337651" target="_blank" rel="noopener noreferrer" aria-label="Investigating Knowledge Structure and Future Directions in IT-Based Business Methods Using Hierarchical Main Path Approach DOI 원문">DOI <span>10.1109/ACCESS.2023.3337651</span> <span aria-hidden="true">↗</span></a></div></li>
+<li class="publication" data-kind="domestic" id="publication-6">
+ <span class="pub-number" aria-hidden="true">06</span>
+ <div class="pub-body"><div class="pub-meta"><span class="pub-year">2023</span><span>국내 학술지</span></div>
+ <h3 class="pub-title"><a href="https://doi.org/10.15813/kmr.2023.24.1.006" target="_blank" rel="noopener noreferrer">수소연료전지 특허 동향 분석: 지식 지속성 기반 주경로 분석 및 텍스트 마이닝 방법 활용</a></h3>
+ <p class="pub-authors"><strong>윤세준</strong>, 박현석</p><p class="pub-venue">지식경영연구, 24(1), 127–145.</p>
+ <a class="pub-link" href="https://doi.org/10.15813/kmr.2023.24.1.006" target="_blank" rel="noopener noreferrer" aria-label="수소연료전지 특허 동향 분석: 지식 지속성 기반 주경로 분석 및 텍스트 마이닝 방법 활용 DOI 원문">DOI <span>10.15813/kmr.2023.24.1.006</span> <span aria-hidden="true">↗</span></a></div></li>
+<li class="publication" data-kind="domestic" id="publication-7">
+ <span class="pub-number" aria-hidden="true">07</span>
+ <div class="pub-body"><div class="pub-meta"><span class="pub-year">2023</span><span>국내 학술지</span></div>
+ <h3 class="pub-title"><a href="https://doi.org/10.13048/jkm.23004" target="_blank" rel="noopener noreferrer">미국 특허분석으로 보는 장내 미생물 기술 발전 현황 — 한의학 연구 및 한의약 기술 발전에 주는 시사점</a></h3>
+ <p class="pub-authors">조건철, <strong>윤세준</strong>, 배정운, 김병주</p><p class="pub-venue">대한한의학회지, 44(1), 38–55.</p>
+ <a class="pub-link" href="https://doi.org/10.13048/jkm.23004" target="_blank" rel="noopener noreferrer" aria-label="미국 특허분석으로 보는 장내 미생물 기술 발전 현황 — 한의학 연구 및 한의약 기술 발전에 주는 시사점 DOI 원문">DOI <span>10.13048/jkm.23004</span> <span aria-hidden="true">↗</span></a></div></li>
+<li class="publication" data-kind="international" id="publication-8">
+ <span class="pub-number" aria-hidden="true">08</span>
+ <div class="pub-body"><div class="pub-meta"><span class="pub-year">2022</span><span>국제 학술지</span></div>
+ <h3 class="pub-title" lang="en"><a href="https://doi.org/10.3390/math10183349" target="_blank" rel="noopener noreferrer">Exploring Knowledge Trajectories of Accounting Information Systems Using Business Method Patents and Knowledge Persistence-Based Main Path Analysis</a></h3>
+ <p class="pub-authors">Rhee, Y., <strong>Yoon, S.</strong>, &amp; Park, H.</p><p class="pub-venue">Mathematics, 10(18), 3349.</p>
+ <a class="pub-link" href="https://doi.org/10.3390/math10183349" target="_blank" rel="noopener noreferrer" aria-label="Exploring Knowledge Trajectories of Accounting Information Systems Using Business Method Patents and Knowledge Persistence-Based Main Path Analysis DOI 원문">DOI <span>10.3390/math10183349</span> <span aria-hidden="true">↗</span></a></div></li>
+<li class="publication" data-kind="international" id="publication-9">
+ <span class="pub-number" aria-hidden="true">09</span>
+ <div class="pub-body"><div class="pub-meta"><span class="pub-year">2022</span><span>국제 학술지</span></div>
+ <h3 class="pub-title" lang="en"><a href="https://doi.org/10.3390/su14053117" target="_blank" rel="noopener noreferrer">Investigating Company’s Technical Development Directions Based on Internal Knowledge Inheritance and Inventor Capabilities: The Case of Samsung Electronics</a></h3>
+ <p class="pub-authors">Han, F., <strong>Yoon, S.</strong>, Raghavan, N., &amp; Park, H.</p><p class="pub-venue">Sustainability, 14(5), 3117.</p>
+ <a class="pub-link" href="https://doi.org/10.3390/su14053117" target="_blank" rel="noopener noreferrer" aria-label="Investigating Company’s Technical Development Directions Based on Internal Knowledge Inheritance and Inventor Capabilities: The Case of Samsung Electronics DOI 원문">DOI <span>10.3390/su14053117</span> <span aria-hidden="true">↗</span></a></div></li>
+<li class="publication" data-kind="international" id="publication-10">
+ <span class="pub-number" aria-hidden="true">10</span>
+ <div class="pub-body"><div class="pub-meta"><span class="pub-year">2021</span><span>국제 학술지</span></div>
+ <h3 class="pub-title" lang="en"><a href="https://doi.org/10.1109/ACCESS.2021.3066573" target="_blank" rel="noopener noreferrer">Developmental Trajectories in Blockchain Technology Using Patent-Based Knowledge Network Analysis</a></h3>
+ <p class="pub-authors">Kim, S., <strong>Yoon, S.</strong>, Raghavan, N., Le, N.-T., &amp; Park, H.</p><p class="pub-venue">IEEE Access, 9, 44704–44717.</p>
+ <a class="pub-link" href="https://doi.org/10.1109/ACCESS.2021.3066573" target="_blank" rel="noopener noreferrer" aria-label="Developmental Trajectories in Blockchain Technology Using Patent-Based Knowledge Network Analysis DOI 원문">DOI <span>10.1109/ACCESS.2021.3066573</span> <span aria-hidden="true">↗</span></a></div></li>
+<li class="publication" data-kind="international" id="publication-11">
+ <span class="pub-number" aria-hidden="true">11</span>
+ <div class="pub-body"><div class="pub-meta"><span class="pub-year">2021</span><span>국제 학술지</span></div>
+ <h3 class="pub-title" lang="en"><a href="https://doi.org/10.1016/j.technovation.2020.102199" target="_blank" rel="noopener noreferrer">Function score-based technological trend analysis</a></h3>
+ <p class="pub-authors">Mun, C., <strong>Yoon, S.</strong>, Raghavan, N., Hwang, D., Basnet, S., &amp; Park, H.</p><p class="pub-venue">Technovation, 101, 102199.</p>
+ <a class="pub-link" href="https://doi.org/10.1016/j.technovation.2020.102199" target="_blank" rel="noopener noreferrer" aria-label="Function score-based technological trend analysis DOI 원문">DOI <span>10.1016/j.technovation.2020.102199</span> <span aria-hidden="true">↗</span></a></div></li>
+<li class="publication" data-kind="international" id="publication-12">
+ <span class="pub-number" aria-hidden="true">12</span>
+ <div class="pub-body"><div class="pub-meta"><span class="pub-year">2021</span><span>국제 학술지</span></div>
+ <h3 class="pub-title" lang="en"><a href="https://doi.org/10.1108/JKM-01-2020-0030" target="_blank" rel="noopener noreferrer">Hierarchical main path analysis to identify decompositional multi-knowledge trajectories</a></h3>
+ <p class="pub-authors"><strong>Yoon, S.</strong>, Mun, C., Raghavan, N., Hwang, D., Kim, S., &amp; Park, H.</p><p class="pub-venue">Journal of Knowledge Management, 25(2), 454–476.</p>
+ <a class="pub-link" href="https://doi.org/10.1108/JKM-01-2020-0030" target="_blank" rel="noopener noreferrer" aria-label="Hierarchical main path analysis to identify decompositional multi-knowledge trajectories DOI 원문">DOI <span>10.1108/JKM-01-2020-0030</span> <span aria-hidden="true">↗</span></a></div></li>
+<li class="publication" data-kind="international" id="publication-13">
+ <span class="pub-number" aria-hidden="true">13</span>
+ <div class="pub-body"><div class="pub-meta"><span class="pub-year">2021</span><span>국제 학술지</span></div>
+ <h3 class="pub-title" lang="en"><a href="https://doi.org/10.3390/su13010391" target="_blank" rel="noopener noreferrer">Identifying Service Opportunities Based on Outcome-Driven Innovation Framework and Deep Learning: A Case Study of Hotel Service</a></h3>
+ <p class="pub-authors">Nam, S., <strong>Yoon, S.</strong>, Raghavan, N., &amp; Park, H.</p><p class="pub-venue">Sustainability, 13(1), 391.</p>
+ <a class="pub-link" href="https://doi.org/10.3390/su13010391" target="_blank" rel="noopener noreferrer" aria-label="Identifying Service Opportunities Based on Outcome-Driven Innovation Framework and Deep Learning: A Case Study of Hotel Service DOI 원문">DOI <span>10.3390/su13010391</span> <span aria-hidden="true">↗</span></a></div></li>
+<li class="publication" data-kind="international" id="publication-14">
+ <span class="pub-number" aria-hidden="true">14</span>
+ <div class="pub-body"><div class="pub-meta"><span class="pub-year">2019</span><span>국제 학술지</span></div>
+ <h3 class="pub-title" lang="en"><a href="https://doi.org/10.1007/s11192-019-03223-8" target="_blank" rel="noopener noreferrer">Structural decomposition of technological domain using patent co-classification and classification hierarchy</a></h3>
+ <p class="pub-authors">Mun, C., <strong>Yoon, S.</strong>, &amp; Park, H.</p><p class="pub-venue">Scientometrics, 121(2), 633–652.</p>
+ <a class="pub-link" href="https://doi.org/10.1007/s11192-019-03223-8" target="_blank" rel="noopener noreferrer" aria-label="Structural decomposition of technological domain using patent co-classification and classification hierarchy DOI 원문">DOI <span>10.1007/s11192-019-03223-8</span> <span aria-hidden="true">↗</span></a></div></li>
+<li class="publication" data-kind="international" id="publication-15">
+ <span class="pub-number" aria-hidden="true">15</span>
+ <div class="pub-body"><div class="pub-meta"><span class="pub-year">2019</span><span>국제 학술지</span></div>
+ <h3 class="pub-title" lang="en"><a href="https://doi.org/10.1371/journal.pone.0220819" target="_blank" rel="noopener noreferrer">Quantitative identification of technological paradigm changes using knowledge persistence</a></h3>
+ <p class="pub-authors">Mun, C., <strong>Yoon, S.</strong>, Kim, Y., Raghavan, N., &amp; Park, H.</p><p class="pub-venue">PLOS ONE, 14(8), e0220819.</p>
+ <a class="pub-link" href="https://doi.org/10.1371/journal.pone.0220819" target="_blank" rel="noopener noreferrer" aria-label="Quantitative identification of technological paradigm changes using knowledge persistence DOI 원문">DOI <span>10.1371/journal.pone.0220819</span> <span aria-hidden="true">↗</span></a></div></li>
+<li class="publication" data-kind="international" id="publication-16">
+ <span class="pub-number" aria-hidden="true">16</span>
+ <div class="pub-body"><div class="pub-meta"><span class="pub-year">2019</span><span>국제 학술지</span></div>
+ <h3 class="pub-title" lang="en"><a href="https://doi.org/10.1016/j.techfore.2018.11.006" target="_blank" rel="noopener noreferrer">Discovering business diversification opportunities using patent information and open innovation cases</a></h3>
+ <p class="pub-authors">Mun, C., Kim, Y., Yoo, D., <strong>Yoon, S.</strong>, Hyun, H., Raghavan, N., &amp; Park, H.</p><p class="pub-venue">Technological Forecasting and Social Change, 139, 144–154.</p>
+ <a class="pub-link" href="https://doi.org/10.1016/j.techfore.2018.11.006" target="_blank" rel="noopener noreferrer" aria-label="Discovering business diversification opportunities using patent information and open innovation cases DOI 원문">DOI <span>10.1016/j.techfore.2018.11.006</span> <span aria-hidden="true">↗</span></a></div></li></ol><p class="empty-state" hidden>검색 결과가 없습니다. 다른 검색어를 입력해 주세요.</p></section>
+ <details class="source-note screen-only"><summary>자료 출처 및 작성 기준</summary><ul><li>학위·졸업연도 및 넥스트솔 창업 경험: 본인 제공 정보. 학생 대상 CV 샘플로 구성했습니다.</li><li>소속·전공·연락처: <a href="https://cjubiz.kr/faculty" target="_blank" rel="noopener noreferrer">청주대학교 경영학과 교수 소개</a>.</li><li>논문 15편 및 인용 지표: <a href="https://scholar.google.co.kr/citations?user=m_wj9_YAAAAJ&amp;hl=ko" target="_blank" rel="noopener noreferrer">본인 Google Scholar 프로필</a>. 서지정보는 출판사·학술기관 자료와 대조했습니다.</li><li>자율운항선박 논문: <a href="https://www.kci.go.kr/kciportal/mobile/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003310397" target="_blank" rel="noopener noreferrer">KCI 등재 정보</a>에서 추가 확인했습니다.</li><li>연구 소개는 확인된 논문 주제를 요약한 문안입니다. 연도는 최종 학술지 발행연도를 우선하고, 2026년 Health Policy and Technology 논문은 온라인 공개 기준으로 표기했습니다.</li></ul></details>
+ <footer class="footer"><span>윤세준 · Sejun Yoon</span><span>Curriculum Vitae / 2026.09</span></footer></main></div>
+ <script>
+ (() => {
+  const rows = [...document.querySelectorAll('.publication')];
+  const search = document.querySelector('#paper-search');
+  const buttons = [...document.querySelectorAll('[data-filter]')];
+  const count = document.querySelector('#paper-count');
+  let filter = 'all';
+  const update = () => {const q = search.value.trim().toLocaleLowerCase(); let visible=0; for(const row of rows){const matches=(filter==='all'||row.dataset.kind===filter)&&row.textContent.toLocaleLowerCase().includes(q);row.hidden=!matches;if(matches) visible++;} count.textContent=visible+' / '+rows.length+'편 · 최신 연도순';document.querySelector('.empty-state').hidden=visible!==0;};
+  for(const button of buttons) button.addEventListener('click',()=>{filter=button.dataset.filter;for(const b of buttons){const active=b===button;b.classList.toggle('is-active',active);b.setAttribute('aria-pressed',String(active));}update();});
+  search.addEventListener('input',update);
+  document.querySelector('.pub-toolbar').hidden=false;
+  document.querySelector('#print-cv').addEventListener('click',()=>window.print());
+ })();
+ </script></body></html>
